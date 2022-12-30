@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>BLOOD DONATION</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        h1 {
+            text-align: center;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <form name ="frmlogin page"action="style.css"method="GET"></form>
+    <h1>BLOOD DONATION</h1>
+    <img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg" width="900" height="350  ">
+    <b>
+        <p>Name <input type="text"name="nm"></p>
+    </b>
+    <b>
+        <p>Donor no.<input type="number" name="num"></p>
+    </b>
+    <b>
+        <p>Date of Birth<input type="date"name="date"></p>
+    </b>
+    <fieldset>
+        <legend> gender</legend>
+        <b>
+            <p>Male<input type="radio"name="men"></p>
+        </b>
+        <b>
+            <p>Female<input type="radio"name="aurat"></p>
+        </b>
+
+    </fieldset>
+    <b>
+        <p> Adress<input type="text" placeholder="Adress" name="pta"></p>
+    </b>
+    <b>
+        <p>E-mail id<input type="email" name="em"></p>
+    </b>
+    
+    <a href="file:///C:/Users/MY/next.html">
+        <button>Next</button></a>
+    
+<?php
+$con=mysqli_connect('localhost','root','','record');
+if(isset($_POST['']))
+{
+    $Name=$_POST['nm'];
+    $Number=$_POST['num'];
+    $E-mail id=$_POST['em'];
+    $Adress=$_POST['pta'];
+    $Gender=$_POST['aurat'];
+    $Gender=$_POST['men'];                                                                                                                                                                         
+    $Date=$_POST['date'];
+    $query="INSERT INTO register(Name	,Donor no.,	Gender	,Adress,	E-mail id	,Date of birth	 )VALUES('$Name', ' $Number',  '$E-mail id'  ,'$Adress','$Gender',' $Date')"
+     $run=mysqli_query($con,$query);
+}
+    
+        ?>
+
+</body>
+
+</html>
